@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container">
+      <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+      >
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a
+            href="/"
+            class="d-inline-flex link-body-emphasis text-decoration-none"
+          >
+            <img src="./images/Logo.png" alt="logo" class="bi logo" />
+          </a>
+        </div>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#Home" class="nav-link px-2 link-dark">Home</a></li>
+          <li><a href="#About" class="nav-link px-2">About</a></li>
+          <li><a href="#Skills" class="nav-link px-2">Skills</a></li>
+          <li><a href="#Projects" class="nav-link px-2">Projects</a></li>
+        </ul>
+        <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-dark me-4">Contact</button>
+          <a
+            href="./assets/Resume.pdf"
+            download
+            class="btn btn-outline-dark me-4"
+          >
+            Resume
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="container-with-ripple">
+      <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle medium shade4"></div>
+        <div class="circle small shade5"></div>
+
+        <div
+          id="Home"
+          style="position: relative; z-index: 10; color: white; padding: 20px"
+        >
+          <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div
+                class="col-10 col-sm-8 col-lg-6 floating"
+                id="mockup-wrapper"
+              >
+                <img
+                  id="mockup"
+                  src="./images/mockup.gif"
+                  class="d-block mx-lg-auto img-fluid"
+                  alt="Bootstrap Themes"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-lg-6">
+                <div id="name_card">
+                  <h1 class="display-5 fw-bold lh-1 mb-3">Pranav Sankpal</h1>
+
+                  <p class="lead hero-section">
+                    Python Developer, Data Scientist, Quantitative Analyst
+                  </p>
+                  <div class="d-grid gap-5 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-light btn-lg px-3">
+                      <a
+                        href="https://www.linkedin.com/in/pranav-sankpal-594b632a9"
+                        ><img
+                          src="./images/linkedin.svg"
+                          alt="linkedin"
+                          class="logo_c"
+                      /></a>
+                    </button>
+                    <button type="button" class="btn btn-light btn-lg px-3">
+                      <a href="https://github.com/Pranav-1719"
+                        ><img
+                          src="./images/github.svg"
+                          alt="github"
+                          class="logo_c"
+                      /></a>
+                    </button>
+                    <button type="button" class="btn btn-light btn-lg px-3">
+                      <a href="mailto:sankpalpranav022@gmail.com"
+                        ><img
+                          src="./images/gmail.svg"
+                          alt="gmail"
+                          class="logo_c"
+                      /></a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education and certification  -->
+    <div
+      class="container px-4 py-5"
+      id="icon-grid"
+      style="margin-top: 50px; padding: 20px"
+    >
+      <div class="title_flex" id="Skills">
+        <div>
+          <h2 class="pb-2 border-bottom"><b>Education</b></h2>
+        </div>
+        <div></div>
+        <div>
+          <h2 class="pb-2 border-bottom"><b>Certifications</b></h2>
+        </div>
+        <div></div>
+      </div>
+      <div class="container-fluid py-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="d-flex align-items-start gap-3">
+              <img
+                src="./images/gcoek.png"
+                alt="Feature icon"
+                width="40"
+                height="40"
+              />
+              <div>
+                <h3 class="fw-bold fs-4 mb-1">
+                  Government College of Engineering, Kolhapur
+                </h3>
+                <p class="mb-0">
+                  <strong
+                    >Bachelor of Technology (B.Tech) in Computer Science and
+                    Engineering</strong
+                  ><br />
+                  June 2023 – Present<br />
+                  Expected Graduation: 2027
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="d-flex align-items-start gap-3">
+              <img
+                src="./images/Coursera.svg"
+                alt="Feature icon"
+                width="40"
+                height="40"
+              />
+              <div>
+                <h3 class="fw-bold fs-4 mb-1">
+                  Python Programming Fundamentals Microsoft
+                </h3>
+                <p class="mb-0">
+                  Python for data analysis, data structures, automation, web
+                  scraping, statistical analysis, data visualization
+                  (Matplotlib, Plotly), version control (Git/GitHub), and
+                  quantitative problem-solving fundamentals.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="d-flex align-items-start gap-3">
+              <img
+                class="placeholder-icon"
+                src="#blank"
+                alt="Feature icon"
+                width="40"
+                height="50"
+              />
+              <div>
+                <h5 class="fw-bold fs-4 mb-1">Core Concepts</h5>
+                <p class="mb-0">
+                  Data Structures and Algorithms, Probability and Statistics,
+                  Data Analysis, Quantitative Problem-Solving, Algorithmic
+                  Thinking, and Foundations of Software Engineering.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="d-flex align-items-start gap-3">
+              <img
+                src="./images/Udemy.svg"
+                alt="Feature icon"
+                width="40"
+                height="40"
+              />
+              <div>
+                <h3 class="fw-bold fs-4 mb-1">
+                  The Complete Full-Stack Web Development Bootcamp
+                </h3>
+                <p class="mb-0">
+                  HTML, CSS, JavaScript, responsive design, React, databases,
+                  Git.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--      Projects  -->
+    <div class="container" id="Projects">
+      <div class="d-md-flex flex-md-equal w-150 my-md-3 ps-md-3">
+        <div
+          class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden project_card"
+        >
+          <div class="my-3 p-3">
+            <h2 class="display-5">Another headline</h2>
+            <p class="lead">And an even wittier subheading.</p>
+          </div>
+          <div
+            class="bg-dark shadow-sm mx-auto"
+            style="width: 80%; height: 200px; border-radius: 21px 21px 0 0"
+          ></div>
+        </div>
+        <div
+          class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden project_card"
+          id="pro2"
+        >
+          <div class="my-3 py-3">
+            <h2 class="display-5">Another headline</h2>
+            <p class="lead">And an even wittier subheading.</p>
+          </div>
+          <div
+            class="bg-body-tertiary shadow-sm mx-auto"
+            style="width: 80%; height: 200px; border-radius: 21px 21px 0 0"
+          ></div>
+        </div>
+        <div
+          class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden project_card"
+          id="pro3"
+        >
+          <div class="my-3 py-3">
+            <h2 class="display-5 text-light">Another headline</h2>
+            <p class="lead text-light">And an even wittier subheading.</p>
+          </div>
+          <div
+            class="bg-body-tertiary shadow-sm mx-auto"
+            style="width: 80%; height: 200px; border-radius: 21px 21px 0 0"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About me section -->
+
+    <div class=" px-4 py-5 text-center" id="About">
+      <div class="py-5" >
+        <h1 class="display-5 fw-bold text-outline-dark ">About Me</h1>
+        <div class="col-lg-6 mx-auto ">
+          <p class="fs-5 mb-4">
+            Computer Science Engineering student with a strong interest in data
+            science, quantitative analysis, and algorithmic thinking. Building a
+            solid foundation in Python, statistics, data structures, and data
+            analysis, with a focus on data-driven problem solving. Developing
+            skills in data exploration, visualization, and statistical
+            reasoning, aiming to apply them in quantitative and analytical roles
+            at the intersection of data, mathematics, and software.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <p class="col-md-4 mb-0 text-body-secondary">©PranavSankpal</p>
+        <a
+          href="/"
+          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+          aria-label="Bootstrap"
+        >
+          <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item">
+            <a href="#Home" class="nav-link px-2 text-body-secondary">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-body-secondary">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Skills" class="nav-link px-2 text-body-secondary"
+              >Skills</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#Projects" class="nav-link px-2 text-body-secondary"
+              >Projects</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#About" class="nav-link px-2 text-body-secondary">About</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
