@@ -4,7 +4,7 @@ html {
 .container-with-ripple {
   position: relative;
   width: 100%;
-  height: 600px; /* Set height based on your content */
+  height: 600px;
   background: #1a2e49;
   overflow: hidden;
 }
@@ -15,8 +15,8 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Stays behind content inside container */
-  pointer-events: none; /* Allows clicks to pass through */
+  z-index: 0;
+  pointer-events: none;
   color: white;
 }
 
@@ -28,7 +28,6 @@ html {
   box-shadow: 0px 0px 1px 0px #508fb9;
 }
 
-/* Layering via z-index */
 .shade1 {
   opacity: 0.1;
   z-index: 1;
@@ -103,6 +102,7 @@ html {
 .logo_c {
   height: 35px;
   width: auto;
+  pointer-events: none; /* ADDED - lets clicks pass through images to buttons */
 }
 .lead {
   color: rgb(0, 0, 0);
@@ -119,7 +119,7 @@ html {
 }
 
 .placeholder-icon {
-  visibility: hidden; /* space kept, icon invisible */
+  visibility: hidden;
 }
 .nav-link {
   color: #406eab;
@@ -129,39 +129,49 @@ p {
   font-size: medium;
   padding-top: 20px;
 }
-.col{
+.col {
   margin-top: 50px;
 }
-h3,h5{
+h3,
+h5 {
   color: #406eab;
 }
 
-
-
-
 .container {
   text-align: left;
- 
 }
 #name_card {
-  background-color: black;
+  position: relative; /* ADDED */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* CHANGED - use rgba for transparency */
   padding: 30px;
   border-radius: 20px;
-  opacity: 0.6;
   color: white;
+  z-index: 100; /* ADDED - ensure it's above ripple */
 }
+
+/* ADDED - ensure buttons are clickable */
+#name_card button {
+  position: relative;
+  z-index: 101;
+  pointer-events: auto;
+}
+
 #mockup-wrapper {
   position: relative;
- 
-  height: 400px;          /* height of the visible div */
-  overflow: hidden;       /* hides excess image */
+  height: 400px;
+  overflow: hidden;
 }
 
 #mockup {
-  width: 400px;           /* make image larger */
+  width: 400px;
   height: auto;
   position: absolute;
-  bottom: -30%;           /* push image down so only ~10% shows */
+  bottom: -30%;
   left: 60%;
   transform: translateX(-50%);
 }
@@ -182,18 +192,23 @@ h3,h5{
   animation: float 3s ease-in-out infinite;
 }
 
-#About{
+#About {
   background: #a1b9cf;
-background: linear-gradient(133deg, rgba(161, 185, 207, 1) 0%, rgba(64, 110, 171, 1) 18%, rgba(21, 48, 61, 1) 51%);
+  background: linear-gradient(
+    133deg,
+    rgba(161, 185, 207, 1) 0%,
+    rgba(64, 110, 171, 1) 18%,
+    rgba(21, 48, 61, 1) 51%
+  );
   color: white;
 }
 
-#pro2{
-  background-color:#406eab;}
-#pro3{
-  background-color:#1a2e49;}
-.project_card{
-  margin-top: 50px;
-
+#pro2 {
+  background-color: #406eab;
 }
-
+#pro3 {
+  background-color: #1a2e49;
+}
+.project_card {
+  margin-top: 50px;
+}
