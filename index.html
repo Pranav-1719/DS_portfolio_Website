@@ -80,30 +80,43 @@
                     Python Developer, Data Scientist, Quantitative Analyst
                   </p>
                   <div class="d-grid gap-5 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-light btn-lg px-3">
-                      <a
-                        href="https://www.linkedin.com/in/pranav-sankpal-594b632a9"
-                        ><img
-                          src="./images/linkedin.svg"
-                          alt="linkedin"
-                          class="logo_c"
-                      /></a>
+                    <button
+                      id="linkedin"
+                      class="btn btn-light btn-lg px-3"
+                      type="button"
+                    >
+                      <img
+                        id="linkedin-img"
+                        src="./images/linkedin.svg"
+                        alt="linkedin"
+                        class="logo_c"
+                      />
                     </button>
-                    <button type="button" class="btn btn-light btn-lg px-3">
-                      <a href="https://github.com/Pranav-1719"
-                        ><img
-                          src="./images/github.svg"
-                          alt="github"
-                          class="logo_c"
-                      /></a>
+
+                    <button
+                      id="github"
+                      class="btn btn-light btn-lg px-3"
+                      type="button"
+                    >
+                      <img
+                        id="github-img"
+                        src="./images/github.svg"
+                        alt="github"
+                        class="logo_c"
+                      />
                     </button>
-                    <button type="button" class="btn btn-light btn-lg px-3">
-                      <a href="mailto:sankpalpranav022@gmail.com"
-                        ><img
-                          src="./images/gmail.svg"
-                          alt="gmail"
-                          class="logo_c"
-                      /></a>
+
+                    <button
+                      id="gmail"
+                      class="btn btn-light btn-lg px-3"
+                      type="button"
+                    >
+                      <img
+                        id="gmail-img"
+                        src="./images/gmail.svg"
+                        alt="gmail"
+                        class="logo_c"
+                      />
                     </button>
                   </div>
                 </div>
@@ -267,10 +280,10 @@
 
     <!-- About me section -->
 
-    <div class=" px-4 py-5 text-center" id="About">
-      <div class="py-5" >
-        <h1 class="display-5 fw-bold text-outline-dark ">About Me</h1>
-        <div class="col-lg-6 mx-auto ">
+    <div class="px-4 py-5 text-center" id="About">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-outline-dark">About Me</h1>
+        <div class="col-lg-6 mx-auto">
           <p class="fs-5 mb-4">
             Computer Science Engineering student with a strong interest in data
             science, quantitative analysis, and algorithmic thinking. Building a
@@ -323,10 +336,38 @@
       </footer>
     </div>
 
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // LinkedIn button
+        document
+          .getElementById("linkedin")
+          .addEventListener("click", function () {
+            window.open(
+              "https://www.linkedin.com/in/pranav-sankpal-594b632a9",
+              "_blank",
+            );
+          });
+
+        // GitHub button
+        document
+          .getElementById("github")
+          .addEventListener("click", function () {
+            window.open("https://github.com/Pranav-1719", "_blank");
+          });
+
+        // Gmail button
+        document.getElementById("gmail").addEventListener("click", function () {
+          window.location.href = "mailto:sankpalpranav022@gmail.com";
+        });
+      });
+    </script>
   </body>
 </html>
