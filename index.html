@@ -363,11 +363,26 @@
             window.open("https://github.com/Pranav-1719", "_blank");
           });
 
-        // Gmail button
+         // Gmail button
         document.getElementById("gmail").addEventListener("click", function () {
-          window.location.href = "mailto:sankpalpranav022@gmail.com";
+          const email = "sankpalpranav022@gmail.com";
+          const subject = "";
+          const body = "";
+
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+          window.open(gmailUrl, "_blank");
+        });
+
+        //udemy
+        document.getElementById("udemy").addEventListener("click", function () {
+          window.open(
+            "https://www.udemy.com/certificate/UC-b008a7fb-1842-40d2-a1e5-db4102ea58a7/",
+            "_blank",
+          );
         });
       });
     </script>
   </body>
 </html>
+
