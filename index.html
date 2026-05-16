@@ -3,387 +3,721 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pranav Sankpal — Portfolio</title>
+    <link rel="icon" type="image/png" href="./images/logo2.png" />
+
+    <!-- Google Fonts: Plus Jakarta Sans (display/body) + DM Serif Display (headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap layout utilities -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+
+    <!-- Portfolio stylesheet -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <div class="container">
-      <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+    <!-- ════════════════════════════════════════════
+         NAVBAR
+    ════════════════════════════════════════════ -->
+    <nav class="navbar-custom" id="navbar">
+      <div class="navbar-logo">
+        <a href="#Home"><img src="./images/Logo.png" alt="Pranav Sankpal" /></a>
+      </div>
+      <ul class="navbar-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Skills">Education</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#About">About</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="#contact" class="btn-primary">Contact</a>
+        <a href="./assets/Resume.pdf" download class="btn-outline">Resume ↓</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#Home" class="mob-link">Home</a>
+      <a href="#Skills" class="mob-link">Education</a>
+      <a href="#Projects" class="mob-link">Projects</a>
+      <a href="#About" class="mob-link">About</a>
+      <a href="#contact" class="mob-link">Contact</a>
+      <a
+        href="./assets/Resume.pdf"
+        download
+        class="btn-outline"
+        style="font-size: 0.95rem; margin-top: 8px"
+        >Resume ↓</a
       >
-        <div class="col-md-3 mb-2 mb-md-0">
-          <a
-            href="/"
-            class="d-inline-flex link-body-emphasis text-decoration-none"
-          >
-            <img src="./images/Logo.png" alt="logo" class="bi logo" />
-          </a>
-        </div>
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#Home" class="nav-link px-2 link-dark">Home</a></li>
-          <li><a href="#About" class="nav-link px-2">About</a></li>
-          <li><a href="#Skills" class="nav-link px-2">Skills</a></li>
-          <li><a href="#Projects" class="nav-link px-2">Projects</a></li>
-        </ul>
-        <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-dark me-4">Contact</button>
-          <a
-            href="./assets/Resume.pdf"
-            download
-            class="btn btn-outline-dark me-4"
-          >
-            Resume
-          </a>
-        </div>
-      </header>
     </div>
 
-    <!-- Hero Section -->
-    <div class="container-with-ripple">
+    <!-- ════════════════════════════════════════════
+         HERO — RIPPLE BACKGROUND
+    ════════════════════════════════════════════ -->
+    <div class="container-with-ripple" id="Home">
       <div class="ripple-background">
         <div class="circle xxlarge shade1"></div>
         <div class="circle xlarge shade2"></div>
         <div class="circle large shade3"></div>
         <div class="circle medium shade4"></div>
         <div class="circle small shade5"></div>
+      </div>
 
-        <div
-          id="Home"
-          style="position: relative; z-index: 10; color: white; padding: 20px"
-        >
-          <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div
-                class="col-10 col-sm-8 col-lg-6 floating"
-                id="mockup-wrapper"
-              >
-                <img
-                  id="mockup"
-                  src="./images/mockup.gif"
-                  class="d-block mx-lg-auto img-fluid"
-                  alt="Bootstrap Themes"
-                  loading="lazy"
-                />
-              </div>
-              <div class="col-lg-6">
-                <div id="name_card">
-                  <h1 class="display-5 fw-bold lh-1 mb-3">Pranav Sankpal</h1>
+      <div class="hero-grid">
+        <!-- LEFT: name card -->
+        <div id="name_card" class="reveal">
+          <h1>Pranav<br />Sankpal</h1>
+          <p class="lead">
+            Python Developer &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp;
+            Quantitative Analyst
+          </p>
+          <div class="hero-social-btns">
+            <button id="linkedin" class="btn" type="button" title="LinkedIn">
+              <img src="./images/linkedin.svg" alt="LinkedIn" class="logo_c" />
+            </button>
+            <button id="github" class="btn" type="button" title="GitHub">
+              <img src="./images/github.svg" alt="GitHub" class="logo_c" />
+            </button>
+            <button id="gmail" class="btn" type="button" title="Email">
+              <img src="./images/gmail.svg" alt="Gmail" class="logo_c" />
+            </button>
+          </div>
+        </div>
 
-                  <p class="lead hero-section">
-                    Python Developer, Data Scientist, Quantitative Analyst
-                  </p>
-                  <div class="d-grid gap-5 d-md-flex justify-content-md-start">
-                    <button
-                      id="linkedin"
-                      class="btn btn-light btn-lg px-3"
-                      type="button"
-                    >
-                      <img
-                        id="linkedin-img"
-                        src="./images/linkedin.svg"
-                        alt="linkedin"
-                        class="logo_c"
-                      />
-                    </button>
+        <!-- RIGHT: mockup -->
+        <div id="mockup-wrapper" class="reveal-right">
+          <img
+            id="mockup"
+            src="./images/mockup.gif"
+            alt="Data Science Dashboard Mockup"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
 
-                    <button
-                      id="github"
-                      class="btn btn-light btn-lg px-3"
-                      type="button"
-                    >
-                      <img
-                        id="github-img"
-                        src="./images/github.svg"
-                        alt="github"
-                        class="logo_c"
-                      />
-                    </button>
+    <!-- ════════════════════════════════════════════
+         TECH STACK
+    ════════════════════════════════════════════ -->
+    <section class="stack-section section-pad-sm">
+      <div class="container-wide">
+        <div style="text-align: center; margin-bottom: 28px" class="reveal">
+          <span class="tag">Tech Stack</span>
+        </div>
+        <div class="stack-row">
+          <div class="stack-chip">
+            <span class="dot" style="background: #3776ab"></span>Python
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #e97627"></span>Pandas
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #4dabcf"></span>NumPy
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #11557c"></span>Matplotlib
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #21a0dc"></span>Seaborn
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #ff6f00"></span>TensorFlow
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #e9762b"></span>Tableau
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #f7931e"></span>Scikit-learn
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #336791"></span>SQL
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #f05032"></span>Git / GitHub
+          </div>
+          <div class="stack-chip">
+            <span class="dot" style="background: #f7df1e"></span>JavaScript
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    <button
-                      id="gmail"
-                      class="btn btn-light btn-lg px-3"
-                      type="button"
-                    >
-                      <img
-                        id="gmail-img"
-                        src="./images/gmail.svg"
-                        alt="gmail"
-                        class="logo_c"
-                      />
-                    </button>
+    <!-- ════════════════════════════════════════════
+         EDUCATION & CERTIFICATIONS
+    ════════════════════════════════════════════ -->
+    <section class="edu-section section-pad" id="Skills">
+      <div class="container-wide">
+        <div class="section-header reveal">
+          <span class="tag">Background</span>
+          <h2 class="section-title">Education &amp; Certifications</h2>
+          <p class="section-subtitle">
+            Building a strong foundation in computer science, data science, and
+            quantitative reasoning.
+          </p>
+        </div>
+
+        <!-- ── Education ── -->
+        <div class="edu-block">
+          <div class="edu-subsection-label reveal">Education</div>
+          <div class="edu-grid">
+            <div class="edu-card reveal delay-1">
+              <div class="edu-header">
+                <div class="edu-icon">
+                  <img
+                    src="./images/gcoek.png"
+                    alt="GCOEK"
+                    style="filter: brightness(0) invert(0.3)"
+                  />
+                </div>
+                <div>
+                  <div class="edu-name">
+                    Government College of Engineering, Kolhapur
+                  </div>
+                  <div class="edu-sub">
+                    B.Tech — Computer Science &amp; Engineering
+                  </div>
+                  <div class="edu-date">
+                    June 2023 – Present &nbsp;·&nbsp; Expected 2027
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Education and certification  -->
-    <div
-      class="container px-4 py-5"
-      id="icon-grid"
-      style="margin-top: 50px; padding: 20px"
-    >
-      <div class="title_flex" id="Skills">
-        <div>
-          <h2 class="pb-2 border-bottom"><b>Education</b></h2>
-        </div>
-        <div></div>
-        <div>
-          <h2 class="pb-2 border-bottom"><b>Certifications</b></h2>
-        </div>
-        <div></div>
-      </div>
-      <div class="container-fluid py-5">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-          <div class="col">
-            <div class="d-flex align-items-start gap-3">
-              <img
-                src="./images/gcoek.png"
-                alt="Feature icon"
-                width="40"
-                height="40"
-              />
-              <div>
-                <h3 class="fw-bold fs-4 mb-1">
-                  Government College of Engineering, Kolhapur
-                </h3>
-                <p class="mb-0">
-                  <strong
-                    >Bachelor of Technology (B.Tech) in Computer Science and
-                    Engineering</strong
-                  ><br />
-                  June 2023 – Present<br />
-                  Expected Graduation: 2027
-                </p>
+              <div class="skills-tags">
+                <span class="skill-tag">DSA</span>
+                <span class="skill-tag">Probability &amp; Stats</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Algorithms</span>
+                <span class="skill-tag">Software Engineering</span>
               </div>
             </div>
-          </div>
 
-          <div class="col">
-            <div class="d-flex align-items-start gap-3">
-              <img
-                src="./images/Coursera.svg"
-                alt="Feature icon"
-                width="40"
-                height="40"
-              />
-              <div>
-                <h3 class="fw-bold fs-4 mb-1">
-                  Python Programming Fundamentals Microsoft
-                </h3>
-                <p class="mb-0">
-                  Python for data analysis, data structures, automation, web
-                  scraping, statistical analysis, data visualization
-                  (Matplotlib, Plotly), version control (Git/GitHub), and
-                  quantitative problem-solving fundamentals.
-                </p>
+            <div class="edu-card reveal delay-2">
+              <div class="edu-header">
+                <div
+                  class="edu-icon"
+                  style="background: #f0f8ff; border-color: #cce0f5"
+                >
+                  <span style="font-size: 20px">📐</span>
+                </div>
+                <div>
+                  <div class="edu-name">Core Academic Concepts</div>
+                  <div class="edu-sub">Mathematics &amp; CS Foundations</div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex align-items-start gap-3">
-              <img
-                class="placeholder-icon"
-                src="#blank"
-                alt="Feature icon"
-                width="40"
-                height="50"
-              />
-              <div>
-                <h5 class="fw-bold fs-4 mb-1">Core Concepts</h5>
-                <p class="mb-0">
-                  Data Structures and Algorithms, Probability and Statistics,
-                  Data Analysis, Quantitative Problem-Solving, Algorithmic
-                  Thinking, and Foundations of Software Engineering.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col"  id="udemy">
-            <div class="d-flex align-items-start gap-3">
-              <img
-                src="./images/Udemy.svg"
-                alt="Feature icon"
-                width="40"
-                height="40"
-              />
-              <div>
-                <h3 class="fw-bold fs-4 mb-1">
-                  The Complete Full-Stack Web Development Bootcamp
-                </h3>
-                <p class="mb-0">
-                  HTML, CSS, JavaScript, responsive design, React, databases,
-                  Git.
-                </p>
+              <p class="edu-desc">
+                Linear Algebra, Calculus, Discrete Mathematics, Probability and
+                Statistics, Data Structures, Algorithmic Thinking, and Software
+                Engineering principles.
+              </p>
+              <div class="skills-tags">
+                <span class="skill-tag">Linear Algebra</span>
+                <span class="skill-tag">Calculus</span>
+                <span class="skill-tag">Discrete Math</span>
+                <span class="skill-tag">Statistics</span>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- ── Certifications ── -->
+        <div class="edu-block">
+          <div class="edu-subsection-label reveal">Certifications</div>
+          <div class="edu-grid">
+            <!-- 1. Data Science Bootcamp — Career 365 / Udemy (FIRST) -->
+            <div class="edu-card reveal delay-1">
+              <div class="edu-header">
+                <div
+                  class="edu-icon"
+                  style="background: #a435f0; border-color: #a435f0"
+                >
+                  <img
+                    src="./images/Udemy.svg"
+                    alt="Udemy"
+                    style="
+                      filter: brightness(0) invert(1);
+                      width: 28px;
+                      height: 28px;
+                    "
+                  />
+                </div>
+                <div>
+                  <div class="edu-name">Data Science Bootcamp</div>
+                  <div class="edu-sub">Career 365 &nbsp;·&nbsp; Udemy</div>
+                </div>
+              </div>
+              <p class="edu-desc">
+                Comprehensive data science curriculum covering statistics,
+                Python for data analysis, machine learning, model evaluation,
+                and real-world project work.
+              </p>
+              <div class="skills-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Statistics</span>
+                <span class="skill-tag green">Machine Learning</span>
+                <span class="skill-tag">EDA</span>
+                <span class="skill-tag green">Scikit-learn</span>
+                <span class="skill-tag gold">Ongoing</span>
+              </div>
+            </div>
+
+            <!-- 2. Oracle -->
+            <div class="edu-card reveal delay-2">
+              <div class="edu-header">
+                <div
+                  class="edu-icon"
+                  style="background: #c74634; border-color: #c74634"
+                >
+                  <span style="font-size: 22px; line-height: 1">🔶</span>
+                </div>
+                <div>
+                  <div class="edu-name">
+                    Oracle Certified Foundations Associate
+                  </div>
+                  <div class="edu-sub">Oracle</div>
+                </div>
+              </div>
+              <p class="edu-desc">
+                Learned SQL concepts, relational databases, querying techniques,
+                and Oracle database fundamentals.
+              </p>
+              <div class="skills-tags">
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Oracle DB</span>
+                <span class="skill-tag">Database Design</span>
+              </div>
+              <a
+                class="edu-cert-link"
+                href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=7B12869C3463FE1E0CBB06D06BE16A74228CD34CC9666A0E0F3E0060612406D9"
+                target="_blank"
+                >View Certificate ↗</a
+              >
+            </div>
+
+            <!-- 3. Full-Stack Web Dev — Udemy -->
+            <div class="edu-card clickable reveal delay-3" id="udemy">
+              <div class="edu-header">
+                <div
+                  class="edu-icon"
+                  style="background: #a435f0; border-color: #a435f0"
+                >
+                  <img
+                    src="./images/Udemy.svg"
+                    alt="Udemy"
+                    style="
+                      filter: brightness(0) invert(1);
+                      width: 28px;
+                      height: 28px;
+                    "
+                  />
+                </div>
+                <div>
+                  <div class="edu-name">
+                    Complete Full-Stack Web Dev Bootcamp
+                  </div>
+                  <div class="edu-sub">Udemy</div>
+                </div>
+              </div>
+              <p class="edu-desc">
+                HTML, CSS, JavaScript, responsive design, React, Node.js and
+                full-stack development.
+              </p>
+              <div class="skills-tags">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+              </div>
+              <a class="edu-cert-link">View Certificate ↗</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!--      Projects  -->
-    <div class="container" id="Projects">
-      <div class="d-md-flex flex-md-equal w-150 my-md-3 ps-md-3">
-        <div
-          class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden project_card"
-        >
-          <div class="my-3 p-3">
-            <h2 class="display-5">Another headline</h2>
-            <p class="lead">And an even wittier subheading.</p>
-          </div>
-          <div
-            class="bg-dark shadow-sm mx-auto"
-            style="width: 80%; height: 200px; border-radius: 21px 21px 0 0"
-          ></div>
-        </div>
-        <div
-          class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden project_card"
-          id="pro2"
-        >
-          <div class="my-3 py-3">
-            <h2 class="display-5">Another headline</h2>
-            <p class="lead">And an even wittier subheading.</p>
-          </div>
-          <div
-            class="bg-body-tertiary shadow-sm mx-auto"
-            style="width: 80%; height: 200px; border-radius: 21px 21px 0 0"
-          ></div>
-        </div>
-        <div
-          class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden project_card"
-          id="pro3"
-        >
-          <div class="my-3 py-3">
-            <h2 class="display-5 text-light">Another headline</h2>
-            <p class="lead text-light">And an even wittier subheading.</p>
-          </div>
-          <div
-            class="bg-body-tertiary shadow-sm mx-auto"
-            style="width: 80%; height: 200px; border-radius: 21px 21px 0 0"
-          ></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- About me section -->
-
-    <div class="px-4 py-5 text-center" id="About">
-      <div class="py-5">
-        <h1 class="display-5 fw-bold text-outline-dark">About Me</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="fs-5 mb-4">
-            Computer Science Engineering student with a strong interest in data
-            science, quantitative analysis, and algorithmic thinking. Building a
-            solid foundation in Python, statistics, data structures, and data
-            analysis, with a focus on data-driven problem solving. Developing
-            skills in data exploration, visualization, and statistical
-            reasoning, aiming to apply them in quantitative and analytical roles
-            at the intersection of data, mathematics, and software.
+    <!-- ════════════════════════════════════════════
+         FEATURED PROJECT
+    ════════════════════════════════════════════ -->
+    <section class="projects-section section-pad" id="Projects">
+      <div class="container-wide">
+        <div class="section-header reveal">
+          <span class="tag">Work</span>
+          <h2 class="section-title">Featured Project</h2>
+          <p class="section-subtitle">
+            Applying machine learning and quantitative analysis to real-world
+            financial market data.
           </p>
         </div>
+
+        <div class="project-featured reveal">
+          <!-- Visual panel -->
+          <div class="project-featured-visual">
+            <span class="pfv-badge">In Progress</span>
+            <div class="project-featured-glow"></div>
+            <div class="pfv-icon">📈</div>
+            <div class="pfv-chart">
+              <svg
+                viewBox="0 0 280 110"
+                xmlns="http://www.w3.org/2000/svg"
+                style="width: 100%"
+              >
+                <!-- Area fill -->
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0abfa3" stop-opacity=".35" />
+                    <stop offset="100%" stop-color="#0abfa3" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M0,90 C20,85 35,72 60,68 S100,50 130,48 S175,30 210,28 S250,22 280,18 L280,110 L0,110 Z"
+                  fill="url(#chartGrad)"
+                />
+                <!-- Main line -->
+                <polyline
+                  points="0,90 30,80 60,68 90,58 130,48 165,36 210,28 245,22 280,18"
+                  fill="none"
+                  stroke="#0abfa3"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <!-- Moving average line -->
+                <polyline
+                  points="0,95 40,88 80,76 120,62 160,50 200,40 240,32 280,26"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.35)"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-dasharray="5 3"
+                />
+                <!-- Dots -->
+                <circle
+                  cx="130"
+                  cy="48"
+                  r="4"
+                  fill="#0abfa3"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="210"
+                  cy="28"
+                  r="4"
+                  fill="#0abfa3"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="280"
+                  cy="18"
+                  r="5"
+                  fill="#0abfa3"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <!-- Axes -->
+                <line
+                  x1="0"
+                  y1="108"
+                  x2="280"
+                  y2="108"
+                  stroke="rgba(255,255,255,0.15)"
+                  stroke-width="1"
+                />
+                <line
+                  x1="1"
+                  y1="0"
+                  x2="1"
+                  y2="108"
+                  stroke="rgba(255,255,255,0.15)"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Content panel -->
+          <div class="project-featured-body">
+            <div class="pf-name">Stock Price Prediction System</div>
+            <p class="pf-desc">
+              Machine learning based stock prediction system using OHLCV market
+              data, technical indicators, feature engineering, and predictive
+              analytics. Built a complete pipeline from raw market data
+              ingestion to model training, evaluation, and visualisation of
+              predicted vs actual price movements.
+            </p>
+
+            <div class="pf-highlights">
+              <div class="pf-highlight-item">
+                <span class="pf-dot"></span>
+                <span
+                  >OHLCV data ingestion, cleaning &amp; feature
+                  engineering</span
+                >
+              </div>
+              <div class="pf-highlight-item">
+                <span class="pf-dot"></span>
+                <span
+                  >Technical indicators: Moving Averages, Volatility &amp; Daily
+                  Return</span
+                >
+              </div>
+              <div class="pf-highlight-item">
+                <span class="pf-dot"></span>
+                <span
+                  >ML model training, comparison &amp; cross-validation</span
+                >
+              </div>
+              <div class="pf-highlight-item">
+                <span class="pf-dot"></span>
+                <span
+                  >Predictive analytics with visual performance metrics</span
+                >
+              </div>
+            </div>
+
+            <div class="pf-footer">
+              <div class="pf-techs">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">Scikit-learn</span>
+                <span class="tech-badge">Matplotlib</span>
+                <span class="tech-badge">NumPy</span>
+              </div>
+              <a
+                href="https://github.com/Pranav-1719/Data-Science-Machine-Learning/tree/main/Stock-Price-Predictor"
+                target="_blank"
+                class="pf-link"
+              >
+                View on GitHub ↗
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <div class="container">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    <!-- ════════════════════════════════════════════
+         ABOUT
+    ════════════════════════════════════════════ -->
+    <section class="about-section section-pad" id="About">
+      <div class="container-wide">
+        <div class="about-inner">
+          <!-- Photo placeholder -->
+          <div class="about-photo-wrap reveal-left">
+            <div class="about-ring about-ring-1"></div>
+            <div class="about-ring about-ring-2"></div>
+            <div class="about-photo-frame">
+              <img
+                src="./images/photo.jpg"
+                alt="Pranav Sankpal"
+                onerror="
+                  this.style.display = 'none';
+                  document.getElementById('photo-ph').style.display = 'flex';
+                "
+              />
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="about-text reveal-right">
+            <span class="tag">About Me</span>
+            <h2 class="section-title">
+              Builder at the<br />data–math–software<br />intersection
+            </h2>
+            <p class="about-desc">
+              Computer Science Engineering student with a strong passion for
+              data science, quantitative analysis, and algorithmic thinking.
+              Building a solid foundation in Python, statistics, data
+              structures, and machine learning — with a focus on data-driven
+              problem solving.
+              <br /><br />
+              Developing skills in exploratory data analysis, visualisation, and
+              statistical reasoning — aiming to apply them in quantitative and
+              analytical roles at the intersection of data, mathematics, and
+              software.
+            </p>
+            <div class="about-interests">
+              <span class="interest-chip">Data Science</span>
+              <span class="interest-chip">Quantitative Finance</span>
+              <span class="interest-chip">Machine Learning</span>
+              <span class="interest-chip">Data Visualisation</span>
+              <span class="interest-chip">Algorithmic Thinking</span>
+              <span class="interest-chip">Open Source</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         CONTACT CTA
+    ════════════════════════════════════════════ -->
+    <section class="contact-section" id="contact">
+      <div
+        class="container-wide"
+        style="position: relative; z-index: 2; text-align: center"
       >
-        <p class="col-md-4 mb-0 text-body-secondary">©PranavSankpal</p>
-        <a
-          href="/"
-          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-          aria-label="Bootstrap"
+        <span
+          class="tag"
+          style="
+            background: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.85);
+          "
+          class="reveal"
+          >Get In Touch</span
         >
-          <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-            <use xlink:href="#bootstrap"></use>
-          </svg>
-        </a>
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <a href="#Home" class="nav-link px-2 text-body-secondary">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="#Skills" class="nav-link px-2 text-body-secondary"
-              >Skills</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#Projects" class="nav-link px-2 text-body-secondary"
-              >Projects</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#About" class="nav-link px-2 text-body-secondary">About</a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+        <h2 class="contact-title reveal delay-1">
+          Let's Build Something<br />Together
+        </h2>
+        <p class="contact-desc reveal delay-2">
+          Whether it's a data project, a collaboration, or just a conversation
+          about data science and quantitative finance — my inbox is open.
+        </p>
+        <div class="contact-btns reveal delay-3">
+          <button
+            class="btn-primary"
+            id="contact-email"
+            style="font-size: 0.9rem; padding: 14px 32px"
+          >
+            Send an Email
+          </button>
+          <a
+            href="https://www.linkedin.com/in/pranav-sankpal-594b632a9"
+            target="_blank"
+            class="btn-contact-outline"
+            >LinkedIn ↗</a
+          >
+        </div>
+      </div>
+    </section>
 
-    <!-- Bootstrap JS -->
+    <!-- ════════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════════ -->
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-copy">
+          © 2025 <span>Pranav Sankpal</span> — Crafted with care
+        </p>
+        <ul class="footer-links">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Skills">Education</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#About">About</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- ════════════════════════════════════════════
+         SCRIPTS
+    ════════════════════════════════════════════ -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Custom JavaScript -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // LinkedIn button
-        document
-          .getElementById("linkedin")
-          .addEventListener("click", function () {
-            window.open(
-              "https://www.linkedin.com/in/pranav-sankpal-594b632a9",
-              "_blank",
-            );
-          });
+      /* ── Navbar scroll shadow ─────────────────── */
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("scrolled", window.scrollY > 20),
+      );
 
-        // GitHub button
-        document
-          .getElementById("github")
-          .addEventListener("click", function () {
-            window.open("https://github.com/Pranav-1719", "_blank");
-          });
+      /* ── Hamburger / mobile menu ──────────────── */
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+        document.body.style.overflow = mobileMenu.classList.contains("open")
+          ? "hidden"
+          : "";
+      });
+      document.querySelectorAll(".mob-link").forEach((l) =>
+        l.addEventListener("click", () => {
+          hamburger.classList.remove("open");
+          mobileMenu.classList.remove("open");
+          document.body.style.overflow = "";
+        }),
+      );
 
-         // Gmail button
-        document.getElementById("gmail").addEventListener("click", function () {
-          const email = "sankpalpranav022@gmail.com";
-          const subject = "";
-          const body = "";
+      /* ── Scroll reveal ────────────────────────── */
+      const ro = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          }),
+        { threshold: 0.08 },
+      );
+      document
+        .querySelectorAll(".reveal, .reveal-left, .reveal-right")
+        .forEach((el) => ro.observe(el));
 
-          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      /* ── Hero reveal on load ──────────────────── */
+      window.addEventListener("load", () =>
+        setTimeout(() => {
+          document
+            .querySelectorAll("#Home .reveal, #Home .reveal-right")
+            .forEach((el) => el.classList.add("visible"));
+        }, 100),
+      );
 
-          window.open(gmailUrl, "_blank");
-        });
+      /* ── Social links ─────────────────────────── */
+      document
+        .getElementById("linkedin")
+        .addEventListener("click", () =>
+          window.open(
+            "https://www.linkedin.com/in/pranav-sankpal-594b632a9",
+            "_blank",
+          ),
+        );
+      document
+        .getElementById("github")
+        .addEventListener("click", () =>
+          window.open("https://github.com/Pranav-1719", "_blank"),
+        );
+      document
+        .getElementById("gmail")
+        .addEventListener("click", () =>
+          window.open(
+            "https://mail.google.com/mail/?view=cm&fs=1&to=sankpalpranav022@gmail.com",
+            "_blank",
+          ),
+        );
 
-        //udemy
-        document.getElementById("udemy").addEventListener("click", function () {
+      /* ── Cert links ───────────────────────────── */
+      document
+        .getElementById("udemy")
+        .addEventListener("click", () =>
           window.open(
             "https://www.udemy.com/certificate/UC-b008a7fb-1842-40d2-a1e5-db4102ea58a7/",
             "_blank",
-          );
-        });
-      });
+          ),
+        );
+
+      /* ── Contact button ───────────────────────── */
+      document
+        .getElementById("contact-email")
+        .addEventListener("click", () =>
+          window.open(
+            "https://mail.google.com/mail/?view=cm&fs=1&to=sankpalpranav022@gmail.com",
+            "_blank",
+          ),
+        );
     </script>
   </body>
 </html>
-
-
